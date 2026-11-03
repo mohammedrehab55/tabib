@@ -4,13 +4,17 @@ import 'package:tabib/core/theme/texts_styles.dart';
 
 class AppTextFormFiled extends StatelessWidget {
   final TextEditingController controller;
+  final TextInputType? keyboardType;
+  String? Function(String?)? validator;
   final String hintText;
   final Widget? suffixIcon;
   final bool? isObscureText;
-  const AppTextFormFiled({
+  AppTextFormFiled({
+    this.keyboardType,
     super.key,
     required this.hintText,
     this.suffixIcon,
+    this.validator,
     this.isObscureText,
     required this.controller,
   });
@@ -18,6 +22,8 @@ class AppTextFormFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
+      validator: validator,
       controller: controller,
       obscureText: isObscureText ?? false,
       decoration: InputDecoration(
@@ -34,6 +40,15 @@ class AppTextFormFiled extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(width: 1.2, color: ColorManager.lighGrey),
+        ),
+
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(width: 1.2, color: Colors.red),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(width: 1.2, color: Colors.red),
         ),
       ),
     );

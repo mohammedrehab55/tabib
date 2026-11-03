@@ -1,7 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tabib/core/data/model/app_result.dart';
 import 'package:tabib/feature/auth/data/repo/auth_repo.dart';
-import 'package:tabib/feature/auth/logic/cubit/auth_state.dart';
+
+import 'package:tabib/feature/auth/modules/login/logic/auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   final AuthRepo repo;

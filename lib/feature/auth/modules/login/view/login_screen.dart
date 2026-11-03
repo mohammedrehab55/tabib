@@ -5,12 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tabib/core/theme/texts_styles.dart';
 import 'package:tabib/core/widgets/app_text_button.dart';
 import 'package:tabib/core/widgets/app_text_form_filed.dart';
-import 'package:tabib/feature/auth/logic/cubit/auth_cubit.dart';
-import 'package:tabib/feature/auth/view/widgets/alerady_have_account_text.dart';
-import 'package:tabib/feature/auth/view/widgets/auth_bloc_listner.dart';
-import 'package:tabib/feature/auth/view/widgets/other_ways_to_register.dart';
-import 'package:tabib/feature/auth/view/widgets/sign_in_with_text.dart';
-import 'package:tabib/feature/auth/view/widgets/terms_and_conditions_text.dart';
+import 'package:tabib/feature/auth/modules/login/logic/auth_cubit.dart';
+import 'package:tabib/feature/auth/modules/login/view/widgets/dont_have_account_text.dart';
+import 'package:tabib/feature/auth/modules/login/view/widgets/auth_bloc_listner.dart';
+import 'package:tabib/feature/auth/widgets/other_ways_to_register.dart';
+import 'package:tabib/feature/auth/widgets/sign_in_with_text.dart';
+
+import 'package:tabib/feature/auth/widgets/terms_and_conditions_text.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -20,7 +21,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<AuthCubit>();
-    debugPrint(cubit.hashCode.toString());
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -72,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 40.h),
                 const TermsAndConditionsText(),
                 SizedBox(height: 30.h),
-                Align(child: const AleradyHaveAccountText()),
+                Align(child: const DontHaveAccountText()),
 
                 AuthBlocListner(),
               ],

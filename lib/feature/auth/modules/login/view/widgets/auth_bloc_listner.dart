@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tabib/core/routing/routes.dart';
 import 'package:tabib/core/theme/color_manager.dart';
 import 'package:tabib/core/theme/texts_styles.dart';
-import 'package:tabib/feature/auth/logic/cubit/auth_cubit.dart';
-import 'package:tabib/feature/auth/logic/cubit/auth_state.dart';
+import 'package:tabib/feature/auth/modules/login/logic/auth_cubit.dart';
+import 'package:tabib/feature/auth/modules/login/logic/auth_state.dart';
 
 class AuthBlocListner extends StatelessWidget {
   const AuthBlocListner({super.key});

@@ -9,6 +9,11 @@ class TextStyles {
     fontSize: 24.sp,
     fontWeight: FontWeighHelper.bold,
   );
+  static TextStyle font24BlacBold = TextStyle(
+    color: Colors.black,
+    fontSize: 24.sp,
+    fontWeight: FontWeighHelper.bold,
+  );
   static TextStyle font14GreyRegular = TextStyle(
     color: ColorManager.grey,
     fontSize: 14.sp,
@@ -19,9 +24,24 @@ class TextStyles {
     fontSize: 12.sp,
     fontWeight: FontWeighHelper.regular,
   );
+  static TextStyle font12BlacMedium = TextStyle(
+    color: Colors.black,
+    fontSize: 12.sp,
+    fontWeight: FontWeighHelper.medium,
+  );
   static TextStyle font14GreyMedium = TextStyle(
     color: ColorManager.silverGrey,
     fontSize: 14.sp,
+    fontWeight: FontWeighHelper.medium,
+  );
+  static TextStyle font14BlacMedium = TextStyle(
+    color: Colors.black,
+    fontSize: 14.sp,
+    fontWeight: FontWeighHelper.regular,
+  );
+  static TextStyle font16BlacMedium = TextStyle(
+    color: Colors.black,
+    fontSize: 16.sp,
     fontWeight: FontWeighHelper.medium,
   );
   static TextStyle font16WhiteSemiBold = TextStyle(

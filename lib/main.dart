@@ -10,13 +10,12 @@ bool isLogged = false;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  //await FirebaseAuth.instance.signOut();
+  await FirebaseAuth.instance.signOut();
   checkIsLogged();
   await DI().setupGetIt();
   runApp(Tabib(router: AppRouter()));
 }
 
 void checkIsLogged() {
-  debugPrint(FirebaseAuth.instance.currentUser.toString());
   isLogged = FirebaseAuth.instance.currentUser == null ? false : true;
 }

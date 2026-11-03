@@ -14,7 +14,7 @@ class Tabib extends StatelessWidget {
       designSize: const Size(375, 812),
       child: MaterialApp(
         onGenerateRoute: router.onGenrateRoute,
-        initialRoute: isLogged ? Routes.homePageRoute : Routes.loginRoute,
+        initialRoute: Routes.doctorPersonalInformationRoute,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       ),
